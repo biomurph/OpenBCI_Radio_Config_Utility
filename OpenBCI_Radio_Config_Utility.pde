@@ -61,10 +61,11 @@ void setup() {
   polllist.close();
   
   //Fills Dropdown menu with available serial ports
+  
   serlist = cp5.addDropdownList("Serial List").setPosition(30, 275).setSize(200,100);
   for(int i = 0; i < serialPorts.length ; i++){ serlist.addItem(serialPorts[i],i); }
   serlist.close();
-  
+  serlist.setBarHeight(20);
   
   //Create the button objects
   get_channel = new Button("Get Channel", 20, 20, 120, 50);
